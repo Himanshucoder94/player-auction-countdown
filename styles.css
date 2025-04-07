@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   color: #333;
+  overflow-y: auto;
 }
 
 /* Hero Section */
@@ -17,27 +18,22 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 20px;
-  position: relative; /* Allows absolute positioning of info boxes */
 }
 
-/* Info Boxes Section (Positioned at the Bottom of the Image) */
+/* Info Boxes Section (In Normal Flow) */
 .info-boxes {
-  position: absolute;
-  bottom: 10%; /* Place the boxes 10% from the bottom of the screen */
-  left: 50%;
-  transform: translateX(-50%); /* Center align horizontally */
+  margin-top: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  z-index: 10;
   width: 100%;
   padding: 0 10px;
 }
@@ -57,7 +53,7 @@ body {
 }
 
 .info-box:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
 }
 
 .info-box h3 {
@@ -81,7 +77,6 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   color: #ff4500;
-  z-index: 5;
 }
 
 /* Subtitle */
@@ -106,14 +101,6 @@ body {
   margin-bottom: 40px;
   font-style: italic;
   color: #ff4500;
-}
-
-/* Cricket Image */
-.cricket-image {
-  width: 80%;
-  max-width: 600px;
-  margin-bottom: 40px;
-  border-radius: 8px;
 }
 
 /* Countdown Timer */
@@ -149,36 +136,29 @@ body {
   .info-boxes {
     flex-direction: column;
     align-items: center;
-    bottom: 5%; /* Move the boxes closer to the bottom */
     width: 90%;
   }
 
   .info-box {
-    width: 100%; /* Make the boxes narrower on smaller screens */
-    margin-bottom: 15px; /* Space between boxes */
+    width: 100%;
+    margin-bottom: 15px;
   }
 
   .title {
-    font-size: 4rem; /* Decrease font size for better fit on mobile */
+    font-size: 4rem;
   }
 
   .subtitle {
     font-size: 1.2rem;
-    max-width: 85%; /* Reduce max width of the subtitle */
+    max-width: 85%;
   }
 
   #countdown-timer {
     font-size: 1.8rem;
     padding: 8px 20px;
   }
-
-  .cricket-image {
-    width: 90%;
-    max-width: 500px;
-  }
 }
 
-/* Small Device Adjustments */
 @media (max-width: 480px) {
   .title {
     font-size: 2.5rem;
@@ -194,13 +174,8 @@ body {
     padding: 6px 15px;
   }
 
-  .cricket-image {
-    width: 100%;
-    max-width: 400px;
-  }
-
   .info-box {
-    width: 100%; /* Make boxes full width on small screens */
-    margin-bottom: 20px; /* Space between boxes */
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
