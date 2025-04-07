@@ -12,19 +12,12 @@ body {
 }
 
 .hero {
-  /* Use a background image of a cricket field */
-  background-image: url('https://images.app.goo.gl/XDW1wvdApmwiaGxR9'); /* Replace with your image URL */
+  background-image: url('https://raw.githubusercontent.com/your-username/adcl-auction/main/images/cricket-field.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
 }
+
 
 .title {
   font-size: 5rem;
