@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teams Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #fdfdfd;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .team-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .team-links button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      display: none; /* Hide all tables by default */
+    }
+
+    td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    .active {
+      display: table;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Select a Team</h1>
+
+<div class="team-links">
+  <button onclick="showTeam('team1')">Team 1</button>
+  <button onclick="showTeam('team2')">Team 2</button>
+  <button onclick="showTeam('team3')">Team 3</button>
+  <button onclick="showTeam('team4')">Team 4</button>
+</div>
+
+<!-- Team 1 -->
+<table id="team1">
+  <tr>
+    <td>Manas Mehrotra</td><td>Harsh Yadav</td><td>Jeet Dhingra</td><td>Samarth Chaturvedi</td><td>Himanshu Dhingra</td><td>Sanjay Kumar</td>
+  </tr>
+  <tr>
+    <td>Mohit Chandra</td><td>Virendra Kumar Dubey</td><td>Prabhav Pulatsya</td><td>Charanjeet Singh</td><td>Achal Agnihotri</td><td>Saksham Singh</td>
+  </tr>
+  <tr>
+    <td>Tanuj Sinha</td><td>Sarthak Dubey</td><td>Neeraj Tomar</td><td>Jaspreet Singh Raja</td><td>Ramgopal Sanveary</td><td>Desh Deepak Srivastava</td>
+  </tr>
+  <tr>
+    <td>Lal Prabodh Singh</td><td>Vikas Dubey</td><td>Ashar Khan</td><td>Suraj Kumar Gupta</td><td>Manish Jauhari</td><td>Deepak</td>
+  </tr>
+  <tr>
+    <td>Mohit Jauhari</td><td>Arun Tandon</td><td>Mikrant Ray</td><td>Anand Chaturvedi</td><td>Santosh Yadav</td><td>Vatsal Goel</td>
+  </tr>
+  <tr>
+    <td>Arun Jaiswal</td><td>Ashutosh Srivastava</td><td>Dilpreet Hora</td><td>Mohd. Haseeb</td><td>Arshpreet Singh Chhabra</td><td>Harshpreet Singh</td>
+  </tr>
+  <tr>
+    <td>Manish Singh</td><td>Amar Jaiswal</td><td>Naimesh Shukla</td><td>Naveen Seth</td><td>Manan Singh Chhabra</td><td>Simran Saluja</td>
+  </tr>
+</table>
+
+<!-- Placeholder for more teams -->
+<table id="team2">
+  <tr><td colspan="6">Team 2 members go here...</td></tr>
+</table>
+<table id="team3">
+  <tr><td colspan="6">Team 3 members go here...</td></tr>
+</table>
+<table id="team4">
+  <tr><td colspan="6">Team 4 members go here...</td></tr>
+</table>
+
+<script>
+  function showTeam(teamId) {
+    const tables = document.querySelectorAll('table');
+    tables.forEach(table => {
+      table.classList.remove('active');
+    });
+
+    document.getElementById(teamId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
