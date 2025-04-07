@@ -11,6 +11,38 @@ body {
   color: #333;
 }
 
+/* Info Boxes Section (Moved to the top) */
+.info-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.info-box {
+  background-color: rgba(255, 69, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ff4500;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  font-size: 1rem;
+}
+
 /* Hero Section */
 .hero {
   background-image: url('https://github.com/Himanshucoder94/player-auction-countdown/blob/main/Maharaja-Yadavindra-Singh-International-Cricket-Stadium.jpg?raw=true');
@@ -28,7 +60,7 @@ body {
 /* Title */
 .title {
   font-family: 'Lobster', cursive;
-  font-size: 6rem; /* Smaller size for better responsiveness */
+  font-size: 6rem;
   font-weight: bold;
   margin-bottom: 20px;
   color: #ff4500;
@@ -46,7 +78,7 @@ body {
   text-align: center;
   color: white;
   font-weight: bold;
-  max-width: 90%; /* Ensure it fits well on mobile */
+  max-width: 90%;
   margin: 10px auto;
 }
 
@@ -60,7 +92,7 @@ body {
 
 /* Cricket Image */
 .cricket-image {
-  width: 80%; /* Make the image responsive */
+  width: 80%;
   max-width: 600px;
   margin-bottom: 40px;
   border-radius: 8px;
@@ -97,12 +129,12 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .title {
-    font-size: 4rem; /* Make title smaller for tablets */
+    font-size: 4rem;
   }
 
   .subtitle {
-    font-size: 1.2rem; /* Reduce subtitle size on tablets */
-    max-width: 85%; /* Reduce width on tablets */
+    font-size: 1.2rem;
+    max-width: 85%;
   }
 
   #countdown-timer {
@@ -111,24 +143,30 @@ body {
   }
 
   .cricket-image {
-    width: 90%; /* Adjust image size for tablets */
+    width: 90%;
     max-width: 500px;
   }
 
-  .auction-month {
-    font-size: 1rem;
+  .info-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box {
+    width: 80%;
+    margin-bottom: 20px;
   }
 }
 
-/* Small Device Adjustments (Mobile phones) */
+/* Small Device Adjustments */
 @media (max-width: 480px) {
   .title {
-    font-size: 2.5rem; /* Make title smaller for mobile phones */
+    font-size: 2.5rem;
   }
 
   .subtitle {
-    font-size: 1rem; /* Smaller font for subtitle */
-    max-width: 90%; /* Adjust the width of subtitle */
+    font-size: 1rem;
+    max-width: 90%;
   }
 
   #countdown-timer {
@@ -137,11 +175,12 @@ body {
   }
 
   .cricket-image {
-    width: 100%; /* Make image full-width for small devices */
+    width: 100%;
     max-width: 400px;
   }
 
-  .auction-month {
-    font-size: 1rem;
+  .info-box {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
