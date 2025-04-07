@@ -29,13 +29,11 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   color: #ff4500;
-  #text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
 }
 
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: 30px;
-  #text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for readability */
 }
 
 .auction-month {
@@ -43,7 +41,6 @@ body {
   margin-bottom: 40px;
   font-style: italic;
   color: #ff4500;
-  #text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cricket-image {
@@ -70,7 +67,6 @@ body {
 .countdown-note {
   font-size: 1rem;
   margin-top: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .container {
