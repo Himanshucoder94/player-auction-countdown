@@ -30,15 +30,16 @@ body {
 /* Info Boxes Section (Positioned Over the Image) */
 .info-boxes {
   position: absolute; /* Positioned over the background image */
-  top: 30px; /* Space from the top */
+  top: 10%; /* Start the boxes from the top but within the image bounds */
   left: 50%;
   transform: translateX(-50%); /* Center align horizontally */
   display: flex;
   justify-content: space-between;
-  width: 80%; /* Ensure the boxes are not too wide */
+  flex-wrap: wrap;
+  gap: 15px; /* Space between boxes */
   z-index: 10; /* Ensure the boxes are above other content */
-  flex-wrap: wrap; /* Allow boxes to wrap on small screens */
-  gap: 20px; /* Space between boxes */
+  width: 90%; /* Ensure the boxes take up most of the screen but stay within the background */
+  padding: 0 10px; /* Ensure there’s padding around the boxes */
 }
 
 .info-box {
@@ -149,11 +150,11 @@ body {
     flex-direction: column;
     align-items: center;
     width: 90%; /* Make the info-boxes container take more width */
-    top: 60px; /* Move it a bit lower from the top */
+    top: 20%; /* Move it lower from the top */
   }
 
   .info-box {
-    width: 80%; /* Make the boxes narrower on smaller screens */
+    width: 100%; /* Make the boxes narrower on smaller screens */
     margin-bottom: 15px; /* Space between boxes */
   }
 
