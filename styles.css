@@ -40,8 +40,9 @@ body {
   border-radius: 10px; /* Rounded corners */
   display: inline-block; /* Make it fit the content and center the box */
   text-align: center; /* Center text inside the box */
+  color: white; /* White text color */
+  font-weight: bold; /* Bold font */
 }
-
 
 .auction-month {
   font-size: 1.2rem;
