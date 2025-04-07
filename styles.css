@@ -148,20 +148,22 @@ body {
   .info-boxes {
     flex-direction: column;
     align-items: center;
+    width: 90%; /* Make the info-boxes container take more width */
+    top: 60px; /* Move it a bit lower from the top */
   }
 
   .info-box {
-    width: 80%;
-    margin-bottom: 20px;
+    width: 80%; /* Make the boxes narrower on smaller screens */
+    margin-bottom: 15px; /* Space between boxes */
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 4rem; /* Decrease font size for better fit on mobile */
   }
 
   .subtitle {
     font-size: 1.2rem;
-    max-width: 85%;
+    max-width: 85%; /* Reduce max width of the subtitle */
   }
 
   #countdown-timer {
@@ -197,7 +199,7 @@ body {
   }
 
   .info-box {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Make boxes full width on small screens */
+    margin-bottom: 20px; /* Space between boxes */
   }
 }
