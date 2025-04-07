@@ -12,7 +12,10 @@ body {
 }
 
 .hero {
-  background: #2d2d2d;
+  /* Use a background image of a cricket field */
+  background-image: url('https://example.com/cricket-field.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -28,11 +31,13 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   color: #ff4500;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
 }
 
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for readability */
 }
 
 .auction-month {
@@ -40,6 +45,7 @@ body {
   margin-bottom: 40px;
   font-style: italic;
   color: #ff4500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cricket-image {
@@ -51,11 +57,12 @@ body {
 #countdown-timer {
   font-size: 3rem;
   font-weight: bold;
-  background: #ff4500;
+  background: rgba(255, 69, 0, 0.7); /* Semi-transparent orange background */
   padding: 10px 30px;
   border-radius: 10px;
   display: flex;
   gap: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for contrast */
 }
 
 #countdown-timer span {
@@ -65,6 +72,7 @@ body {
 .countdown-note {
   font-size: 1rem;
   margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .container {
