@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>G maane Genius</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #fdfdfd;
+    }
 
+    h1 {
+      text-align: center;
+    }
+
+    .team-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .team-links button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      display: none; /* Hide all tables by default */
+    }
+
+    td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    .active {
+      display: table;
+    }
+  </style>
+</head>
+<body>
+
+<h1>RULES</h1>
+
+<div class="team-links">
+  <button onclick="showTeam('pointsystem')">Point System</button>
+  <button onclick="showTeam('overall')">Overall</button>
+  <button onclick="showTeam('game1')">Game 1</button>
+</div>
+
+<table id="pointsystem">
+</table>
+
+<table id="overall">
+  <tr>
+    <td>Manas Mehrotra</td>
+  </tr>
+  <tr>
+    <td>Mohit Chandra</td>
+  </tr>
+  <tr>
+    <td>Himanshu Dhingra</td>
+  </tr>
+  <tr>
+    <td>Harsh Yadav</td>
+  </tr>
+  <tr>
+    <td>Sarthak Dubey</td>
+  </tr>
+</table>
+
+<table id="game1">
+  <tr>
+    <td>Jeet Kumar</td>
+  </tr>
+  <tr>
+    <td>VK Dubey</td>
+  </tr>
+  <tr>
+    <td>Nicholas Pooran</td>
+  </tr>
+  <tr>
+    <td>Ramgopal</td>
+  </tr>
+  <tr>
+    <td>Rana</td>
+  </tr>
+</table>
+
+<script>
+  function showTeam(teamId) {
+    const tables = document.querySelectorAll('table');
+    tables.forEach(table => {
+      table.classList.remove('active');
+    });
+
+    document.getElementById(teamId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
