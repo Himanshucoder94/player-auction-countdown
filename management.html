@@ -1,1 +1,75 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ADCL3.0 Management Committee</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .member {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .member:hover {
+      transform: translateY(-5px);
+    }
+
+    .member img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .member-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Management Committee</h1>
+
+  <div class="grid">
+    <div class="member">
+      <div class="member-name">Manas Mehrotra</div>
+    </div>
+    <div class="member">
+      <img src="images/harsh.jpg" alt="Harsh Yadav">
+      <div class="member-name">Harsh Yadav</div>
+    </div>
+    <div class="member">
+      <img src="images/sarthak.jpg" alt="Sarthak Dubey">
+      <div class="member-name">Sarthak Dubey</div>
+    </div>
+  </div>
+
+</body>
+</html>
