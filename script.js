@@ -22,9 +22,13 @@ const x = setInterval(function() {
   document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
   document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
 
+  
+
   // If the countdown is finished, display a message
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdown-timer").innerHTML = "The Auction is Live!";
   }
 }, 1000);
+
+setInterval(fetchSheetData, 300000); // 300000 ms = 5 minutes
