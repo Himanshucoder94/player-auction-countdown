@@ -59,6 +59,7 @@
   <button onclick="showSection('kkrvscsk')">Practice Game - KKR vs CSK</button>
   <button onclick="showSection('lsgvscsk')">Practice Game - LSG vs CSK</button>
   <button onclick="showSection('pointscoring')">Point Scoring System</button>
+  <button onclick="showSection('scoringpoint')">G maane Genius Scoring Point System</button>
 </div>
 
 <!-- Sections -->
@@ -162,8 +163,14 @@
 
 <!-- Section for Point Calculation Publishing -->
 <div id="pointscoring" class="section">
-  <h2>Point Calculation Publishing</h2>
+  <h2>Point Calculation</h2>
   <table id="scoringTable" border="1"></table>
+</div>
+  
+  <!-- Section for G maane Genius Scoring Calculation Publishing -->
+<div id="scoringpoint" class="section">
+  <h2>G maane Genius Scoring Point System</h2>
+  <table id="geniusscoring" border="1"></table>
 </div>
 
 <script>
@@ -203,6 +210,9 @@
 
     if (id === "pointscoring") {
       fetchSheetData("1776955779", "scoringTable");
+
+    if (id== "scoringpoint"){
+      fetchSheetData("1568861482","geniusscoring");
     }
   }
 </script>
