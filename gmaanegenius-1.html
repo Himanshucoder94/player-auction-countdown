@@ -154,19 +154,22 @@
   </table>
 </div>
 
+<!-- Section for Practice Game - LSG vs CSK -->
 <div id="lsgvscsk" class="section">
   <h2>Practice Game - LSG vs CSK</h2>
-  <table id="dataTable" border="1"></table>
+  <table id="lsgTable" border="1"></table>
 </div>
 
+<!-- Section for Point Calculation Publishing -->
 <div id="pointscoring" class="section">
-  <h2>Point Scoring System</h2>
-  <table id="dataTable" border="1"></table>
+  <h2>Point Calculation Publishing</h2>
+  <table id="scoringTable" border="1"></table>
 </div>
 
 <script>
-  async function fetchSheetData() {
-    const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdKR4dbyw456qSna7YbrNT0x6K9TtBbuziQn9IOWxpQfYHktldhgX06yWXlbnNNypCszGjXjAoqdg/pub?gid=1776955779&single=true&output=csv";
+  async function fetchSheetData(gid, elementId) {
+    const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdKR4dbyw456qSna7YbrNT0x6K9TtBbuziQn9IOWxpQfYHktldhgX06yWXlbnNNypCszGjXjAoqdg/pub?gid=${gid}&single=true&output=csv`;
+
     try {
       const response = await fetch(url);
       const text = await response.text();
@@ -181,9 +184,9 @@
         html += "</tr>";
       });
 
-      document.getElementById("dataTable").innerHTML = html;
+      document.getElementById(elementId).innerHTML = html;
     } catch (err) {
-      console.error("Failed to fetch sheet data:", err);
+      console.error(`Failed to fetch data for ${elementId}`, err);
     }
   }
 
@@ -191,10 +194,15 @@
     document.querySelectorAll('.section').forEach(div => {
       div.classList.remove('active');
     });
+
     document.getElementById(id).classList.add('active');
 
+    if (id === "lsgvscsk") {
+      fetchSheetData("360030953", "lsgTable");
+    }
+
     if (id === "pointscoring") {
-      fetchSheetData();
+      fetchSheetData("1776955779", "scoringTable");
     }
   }
 </script>
