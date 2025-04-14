@@ -198,24 +198,24 @@
   }
 
   function showSection(id) {
-    document.querySelectorAll('.section').forEach(div => {
-      div.classList.remove('active');
-    });
+  document.querySelectorAll('.section').forEach(div => {
+    div.classList.remove('active');
+  });
 
-    document.getElementById(id).classList.add('active');
+  document.getElementById(id).classList.add('active');
 
-    if (id === "lsgvscsk") {
-      fetchSheetData("360030953", "lsgTable");
-    }
-
-    if (id === "pointscoring") {
-      fetchSheetData("1776955779", "scoringTable");
-
-    if (id== "scoringpoint"){
-      fetchSheetData("1568861482","geniusscoring");
-    }
+  if (id === "lsgvscsk") {
+    fetchSheetData("360030953", "lsgTable");
   }
-</script>
+
+  if (id === "pointscoring") {
+    fetchSheetData("1776955779", "scoringTable");
+  }
+
+  if (id === "scoringpoint") {
+    fetchSheetData("1568861482", "geniusscoring");
+  }
+}
 
 </body>
 </html>
