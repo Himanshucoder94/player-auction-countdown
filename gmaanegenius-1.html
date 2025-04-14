@@ -56,12 +56,12 @@
   <button onclick="showSection('pointsystem')">Point System</button>
   <button onclick="showSection('overall')">Overall</button>
   <button onclick="showSection('game1')">Game 1</button>
-  <button onclick="showSection('kkrvscsk')">Practice Game - KKR vs CSK </button>
-  <button onclick="showSection('lsgvscsk')">Practice Game - LSG vs CSK </button>
-  <button onclick="showSection('pointscoring')">Point Scoring System </button>
+  <button onclick="showSection('kkrvscsk')">Practice Game - KKR vs CSK</button>
+  <button onclick="showSection('lsgvscsk')">Practice Game - LSG vs CSK</button>
+  <button onclick="showSection('pointscoring')">Point Scoring System</button>
 </div>
 
-<!-- Point System Section -->
+<!-- Sections -->
 <div id="pointsystem" class="section active">
   <h1>G Maane Genius</h1>
   <h2>ADCL 3.0</h2>
@@ -106,7 +106,6 @@
   </table>
 </div>
 
-<!-- Overall Section -->
 <div id="overall" class="section">
   <table>
     <tr><th>Player</th><th>Points</th></tr>
@@ -118,7 +117,6 @@
   </table>
 </div>
 
-<!-- Game 1 Section -->
 <div id="game1" class="section">
   <table>
     <tr><th>Player</th><th>Points</th></tr>
@@ -129,7 +127,7 @@
     <tr><td>Vikas Dubey</td><td>-</td></tr>
   </table>
 </div>
-  
+
 <div id="kkrvscsk" class="section">
   <h2>Practice Game - KKR vs CSK</h2>
   <table>
@@ -156,14 +154,12 @@
   </table>
 </div>
 
-  <div id="lsgvscsk" class="section">
+<div id="lsgvscsk" class="section">
   <h2>Practice Game - LSG vs CSK</h2>
   <table id="dataTable" border="1"></table>
 </div>
 
-<script>
-  async function fetchSheetData() {
-    const url = "<div id="pointscoring" class="section">
+<div id="pointscoring" class="section">
   <h2>Point Scoring System</h2>
   <table id="dataTable" border="1"></table>
 </div>
@@ -171,49 +167,24 @@
 <script>
   async function fetchSheetData() {
     const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdKR4dbyw456qSna7YbrNT0x6K9TtBbuziQn9IOWxpQfYHktldhgX06yWXlbnNNypCszGjXjAoqdg/pub?gid=1776955779&single=true&output=csv";
+    try {
+      const response = await fetch(url);
+      const text = await response.text();
+      const rows = text.trim().split("\n").map(row => row.split(","));
 
-    const response = await fetch(url);
-    const text = await response.text();
-    const rows = text.trim().split("\n").map(row => row.split(","));
-
-    let html = "";
-    rows.forEach((row, i) => {
-      html += "<tr>";
-      row.forEach(cell => {
-        html += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
+      let html = "";
+      rows.forEach((row, i) => {
+        html += "<tr>";
+        row.forEach(cell => {
+          html += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
+        });
+        html += "</tr>";
       });
-      html += "</tr>";
-    });
 
-    document.getElementById("dataTable").innerHTML = html;
-  }
-
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(div => {
-      div.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
-
-    if (id === "pointscoring") {
-      fetchSheetData();
+      document.getElementById("dataTable").innerHTML = html;
+    } catch (err) {
+      console.error("Failed to fetch sheet data:", err);
     }
-  }
-</script>";
-
-    const response = await fetch(url);
-    const text = await response.text();
-    const rows = text.trim().split("\n").map(row => row.split(","));
-
-    let html = "";
-    rows.forEach((row, i) => {
-      html += "<tr>";
-      row.forEach(cell => {
-        html += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
-      });
-      html += "</tr>";
-    });
-
-    document.getElementById("dataTable").innerHTML = html;
   }
 
   function showSection(id) {
@@ -228,42 +199,5 @@
   }
 </script>
 
-  <div id="pointscoring" class="section">
-  <h2>Point Scoring System</h2>
-  <table id="dataTable" border="1"></table>
-</div>
-
-<script>
-  async function fetchSheetData() {
-    const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdKR4dbyw456qSna7YbrNT0x6K9TtBbuziQn9IOWxpQfYHktldhgX06yWXlbnNNypCszGjXjAoqdg/pub?gid=1776955779&single=true&output=csv";
-
-    const response = await fetch(url);
-    const text = await response.text();
-    const rows = text.trim().split("\n").map(row => row.split(","));
-
-    let html = "";
-    rows.forEach((row, i) => {
-      html += "<tr>";
-      row.forEach(cell => {
-        html += i === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`;
-      });
-      html += "</tr>";
-    });
-
-    document.getElementById("dataTable").innerHTML = html;
-  }
-
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(div => {
-      div.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
-
-    if (id === "pointscoring") {
-      fetchSheetData();
-    }
-  }
-</script>
-  
 </body>
 </html>
