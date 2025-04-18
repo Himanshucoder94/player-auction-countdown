@@ -58,6 +58,7 @@
   <button onclick="showSection('game1')">Game 1</button>
   <button onclick="showSection('kkrvscsk')">Practice Game - KKR vs CSK</button>
   <button onclick="showSection('lsgvscsk')">Practice Game - LSG vs CSK</button>
+  <button onclick="showSection('rcbvspbks')">Practice Game - RCB vs PBKS</button>
   <button onclick="showSection('pointscoring')">Point Scoring System</button>
   <button onclick="showSection('scoringpoint')">G maane Genius Scoring Point System</button>
   <button onclick="window.open('https://forms.gle/ZuweU31jS1BRmYrKA', '_blank')">Submit Team</button>
@@ -157,9 +158,33 @@
 </div>
 
 <!-- Section for Practice Game - LSG vs CSK -->
-<div id="lsgvscsk" class="section">
+  <div id="lsgvscsk" class="section">
   <h2>Practice Game - LSG vs CSK</h2>
-  <table id="lsgTable" border="1"></table>
+  <table>
+    <tr><th>Player</th><th>Points</th></tr>
+    <tr><td>Gaurav</td><td>901</td></tr>
+    <tr><td>Ramgopal</td><td>888</td></tr>
+    <tr><td>Ashutosh Srivastava</td><td>786</td></tr>
+    <tr><td>Santosh Upadhyay</td><td>768</td></tr>
+    <tr><td>Tanuj Sinha</td><td>710</td></tr>
+    <tr><td>Mohit Jauhari</td><td>702</td></tr>
+    <tr><td>Sarthak Dubey</td><td>692</td></tr>
+    <tr><td>Charanjeet</td><td>653</td></tr>
+    <tr><td>Agnihotri</td><td>556</td></tr>
+    <tr><td>Manish Jauhari</td><td>546</td></tr>
+    <tr><td>Simran Saluja</td><td>514</td></tr>
+    <tr><td>Santosh Yadav</td><td>454</td></tr>
+    <tr><td>Manas Mehrotra</td><td>419</td></tr>
+    <tr><td>Desh Deepak Shrivastava</td><td>384</td></tr>
+    <tr><td>Mohit Chandra</td><td>358</td></tr>
+    <tr><td>Arshpreet</td><td>352</td></tr>
+    <tr><td>Sanjay Kumar</td><td>341</td></tr>
+  </table>
+</div>
+  
+  <div id="rcbvspbks" class="section">
+  <h2>Practice Game - RCB vs PBKS</h2>
+  <table id="scoringCalculation" border="1"></table>
 </div>
 
 <!-- Section for Point Calculation Publishing -->
@@ -205,8 +230,8 @@
 
   document.getElementById(id).classList.add('active');
 
-  if (id === "lsgvscsk") {
-    fetchSheetData("360030953", "lsgTable");
+  if(id ==="rcbvspbks"){
+    fetchSheetData("360030953", "scoringCalculation");
   }
 
   if (id === "pointscoring") {
