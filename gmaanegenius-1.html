@@ -56,9 +56,12 @@
   <button onclick="showSection('pointsystem')">Point System</button>
   <button onclick="showSection('overall')">Overall</button>
   <button onclick="showSection('game1')">Game 1</button>
-  <button onclick="showSection('kkrvscsk')">Practice Game - KKR vs CSK</button>
-  <button onclick="showSection('lsgvscsk')">Practice Game - LSG vs CSK</button>
-  <button onclick="showSection('rcbvspbks')">Practice Game - RCB vs PBKS</button>
+  <select onchange="handlePracticeGameChange(this)">
+    <option disabled selected>Practice Game</option>
+    <option value="kkrvscsk">KKR vs CSK</option>
+    <option value="lsgvscsk">LSG vs CSK</option>
+    <option value="rcbvspbks">RCB vs PBKS</option>
+  </select>
   <button onclick="showSection('pointscoring')">Point Scoring System</button>
   <button onclick="showSection('scoringpoint')">G maane Genius Scoring Point System</button>
   <button onclick="window.open('https://forms.gle/ZuweU31jS1BRmYrKA', '_blank')">Submit Team</button>
@@ -242,7 +245,13 @@
     fetchSheetData("1568861482", "geniusscoring");
   }
 }
-  
+  function handlePracticeGameChange(selectElement) {
+    const selectedValue = selectElement.value;
+    if (selectedValue) {
+      showSection(selectedValue);
+    }
+  }
 </script>
+  
 </body>
 </html>
