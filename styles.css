@@ -65,6 +65,32 @@ body {
   font-size: 1rem;
   display: none;
 }
+/* Header Styling */
+.site-header {
+  background-color: #ffffff; /* Adjust as needed */
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container to align content */
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo */
+}
+
+/* Logo Link Styling */
+.logo-link {
+  display: inline-block;
+}
+
+/* Logo Image Styling */
+.site-logo {
+  height: 60px; /* Adjust height as needed */
+  width: auto;
+  display: block;
+}
+
 
 .info-box.open p {
   display: block;
