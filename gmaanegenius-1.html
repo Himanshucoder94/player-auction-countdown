@@ -187,7 +187,7 @@
 </div>
 
   <!-- Section for Practice Game - RCB vs PBKS -->
-  <div id="lsgvscsk" class="section">
+<div id="lsgvscsk" class="section">
   <h2>Practice Game - RCB vs PBKS</h2>
   <table>
     <tr><th>Player</th><th>Points</th></tr>
@@ -207,7 +207,8 @@
     <tr><td>Santosh upadhyay</td><td>104</td></tr>
   </table>
 </div>
-  
+
+  <!-- Change this for new games -->
   <div id="rrvsrcb" class="section">
   <h2>Practice Game - RR vs RCB</h2>
   <table id="scoringCalculation" border="1"></table>
@@ -256,8 +257,8 @@
 
   document.getElementById(id).classList.add('active');
 
-  if(id ==="rcbvspbks"){
-    fetchSheetData("360030953", "scoringCalculation");
+  if(id ==="rrvsrcb"){
+    fetchSheetData("360030953", "scoringCalculation"); 
   }
 
   if (id === "pointscoring") {
