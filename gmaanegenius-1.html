@@ -61,11 +61,12 @@
     <option value="kkrvscsk">KKR vs CSK</option>
     <option value="lsgvscsk">LSG vs CSK</option>
     <option value="rcbvspbks">RCB vs PBKS</option>
+    <option value="rrvsrcb">RR vs RCB</option>
   </select>
-  <button onclick="showSection('rrvsrcb')">RR vs RCB</button>
+  <button onclick="showSection('kkrvspbks')">KKR vs PBKS</button>
   <button onclick="showSection('pointscoring')">Point Scoring System</button>
   <button onclick="showSection('scoringpoint')">G maane Genius Scoring Point System</button>
-  <button onclick="window.open('https://forms.gle/VSs4eD79oiZKJt3p9', '_blank')">Submit Team</button>
+  <button onclick="window.open('https://forms.gle/FxMFyFhbTe5Fqzhi7', '_blank')">Submit Team</button>
 </div>
 
 <!-- Sections -->
@@ -208,9 +209,32 @@
   </table>
 </div>
 
-  <!-- Change this for new games -->
-  <div id="rrvsrcb" class="section">
+  <!-- Section for Practice Game - RR vs RCB -->
+<div id="lsgvscsk" class="section">
   <h2>Practice Game - RR vs RCB</h2>
+  <table>
+      <tr><th>Player</th><th>Points</th></tr>
+      <tr><td>Manas Mehrotra</td><td>1114</td></tr>
+      <tr><td>Sarthak Dubey</td><td>1109</td></tr>
+      <tr><td>Sanjay kumar</td><td>1007</td></tr>
+      <tr><td>Mohit Jauhari</td><td>1002</td></tr>
+      <tr><td>Charanjeet</td><td>962</td></tr>
+      <tr><td>Achal</td><td>948</td></tr>
+      <tr><td>Jeet Kumar Dhingra</td><td>907</td></tr>
+      <tr><td>Ramgopal</td><td>895</td></tr>
+      <tr><td>Simran Saluja</td><td>807</td></tr>
+      <tr><td>Dilpreet Hora</td><td>784</td></tr>
+      <tr><td>Santosh Yadav</td><td>763</td></tr>
+      <tr><td>Arshpreet</td><td>677</td></tr>
+      <tr><td>Gaurav sahu</td><td>629</td></tr>
+      <tr><td>Ashutosh Srivastava</td><td>519</td></tr>
+      <tr><td>Santosh upadhyay</td><td>390</td></tr>
+  </table>
+</div>
+
+  <!-- Change this for new games -->
+  <div id="kkrvspbks" class="section">
+  <h2>Practice Game - KKR vs PBKS</h2>
   <table id="scoringCalculation" border="1"></table>
 </div>
 
@@ -257,7 +281,7 @@
 
   document.getElementById(id).classList.add('active');
 
-  if(id ==="rrvsrcb"){
+  if(id ==="kkrvspbks"){
     fetchSheetData("360030953", "scoringCalculation"); 
   }
 
