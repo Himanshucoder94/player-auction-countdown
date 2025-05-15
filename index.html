@@ -1,10 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ADCL 3.0 Auction Countdown</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    :root {
+      --primary: #004aad;
+      --accent: #ffd700;
+      --bg: #f5f5f5;
+      --text: #333;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: var(--primary);
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .site-logo {
+      max-height: 80px;
+      border-radius: 10px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .title {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .auction-month {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 2rem 0 1rem;
+      color: var(--accent);
+    }
+
+    /* Countdown Timer */
+    #countdown-timer {
+      font-size: 1.5rem;
+      background-color: white;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    #countdown-timer span {
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .countdown-note {
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* Info Boxes */
+    .info-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-content {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.2rem;
+      }
+
+      #countdown-timer {
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+
+      .info-boxes {
+        gap: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,13 +151,11 @@
   <!-- Main Content -->
   <section class="hero">
     <div class="container">
-      <!-- ADCL 3.0 Text -->
       <h1 class="title">ADCL 3.0</h1>
       <p class="subtitle">After the success of ADCL 1.0 and ADCL 2.0, we plan to take the event to the next level!</p>
       <p class="subtitle">Stay tuned for excitement. We will roll out the surprises slowly, not at once.</p>
       <p class="subtitle">ADCL 1.0 had 4 teams. ADCL 2.0 had 6 teams. Increase in the players, increase in the excitement.</p>
 
-      <!-- Auction Month -->
       <p class="auction-month">The Auction Month: September</p>
 
       <!-- Countdown Timer -->
